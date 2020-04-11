@@ -5,3 +5,7 @@
 .container {
   @apply px-4;
 }
+.btn:hover > span,
+a:hover > span {
+  padding-left: 10px;
+}
