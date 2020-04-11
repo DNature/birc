@@ -5,6 +5,14 @@
 .container {
   @apply px-4;
 }
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
 .btn:hover > span,
 a:hover > span {
   padding-left: 10px;
