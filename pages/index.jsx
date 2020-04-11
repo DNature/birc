@@ -1,15 +1,7 @@
 import React from "react";
-import Head from "next/head";
 
 const Home = () => (
   <>
-    <Head>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
-
     <div className="relative bg-gray-15">
       <div className="container mx-auto">
         <div className="lg:grid grid-cols-7 gap-4 py-40">
