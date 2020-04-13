@@ -36,11 +36,13 @@ const Navbar = ({ pathname, routes }) => {
       >
         <nav className="flex content-center ">
           <CustomLink href="/" className="my-auto">
-            <p
-              className={`mr-10  transition-all duration-200 my-auto text-xl font-bold text-primary-100`}
-            >
-              BIRC
-            </p>
+            <img
+              src="/logo.svg"
+              alt="Logo"
+              className={`${
+                navBackground ? "w-16" : "w-24"
+              } mr-10  transition-all duration-200`}
+            />
           </CustomLink>
           {routes.map(({ path, name }) => (
             <CustomLink
