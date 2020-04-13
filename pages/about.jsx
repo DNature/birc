@@ -66,6 +66,8 @@ const About = () => {
           <div className="my-4 h-2 bg-gray-25 lg:w-1/6 w-2/6" />
         </div>
       </div>
+
+      {/* About Birc */}
       <div className="">
         <div className="container max-w-2xl mx-auto py-8">
           <div className="mb-12">
@@ -112,6 +114,7 @@ const About = () => {
           </button>
           <hr className="my-4 text-gray-25" />
 
+          {/* Mission and vision */}
           <div className="mt-12">
             <button
               className={`md:text-lg font-bold text-gray-100 px-4 py-2 rounded-tr ${
@@ -133,6 +136,8 @@ const About = () => {
             {pages[page]}
           </div>
         </div>
+
+        {/* Partners */}
         <div className="bg-gray-15">
           <div className="container mx-auto max-w-2xl py-20">
             <div className="mb-20">
@@ -187,6 +192,28 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* Management */}
+        <div className="">
+          <div className="container mx-auto max-w-2xl py-20">
+            <div className="mb-10">
+              <h2 className="text-xl font-bold text-gray-100">
+                OUR MANAGEMENT
+              </h2>
+
+              <div className="my-4 h-2 bg-gray-100 lg:w-1/6 w-2/6"></div>
+            </div>
+
+            <div className="">
+              <p className="text-lg font-semibold">
+                BIRC is under the Leadership of four professionals as Directors
+                with:
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/*  */}
       </div>
     </MainLayout>
   );
