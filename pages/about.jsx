@@ -1,8 +1,52 @@
 import React, { useState } from "react";
 import MainLayout from "../components/layouts/layout";
 
+const Vision = () => (
+  <div className="bg-gray-25 p-4 rounded rounded-tl-none">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi mollitia,
+      ut temporibus nobis exercitationem totam consectetur quibusdam,
+      necessitatibus magnam hic velit labore reiciendis nulla aperiam nihil
+      voluptate, alias nemo. Ipsum, deserunt excepturi rerum repudiandae harum
+      dolores nemo qui, laborum praesentium exercitationem officia doloribus
+      iusto necessitatibus corrupti laudantium, dicta quae soluta?
+    </p>
+  </div>
+);
+
+const Mission = () => (
+  <div className="bg-gray-25 p-4 rounded">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi mollitia,
+      ut temporibus nobis exercitationem totam consectetur quibusdam,
+      necessitatibus magnam hic velit labore reiciendis nulla aperiam nihil
+      voluptate, alias nemo. Ipsum, deserunt excepturi rerum repudiandae harum
+      dolores nemo qui, laborum praesentium exercitationem officia doloribus
+      iusto necessitatibus corrupti laudantium, dicta quae soluta?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aut rerum
+      animi fuga laborum neque perspiciatis consectetur itaque. Dolorum possimus
+      eos cupiditate asperiores a ullam ipsum sapiente pariatur exercitationem
+      corporis!
+    </p>
+  </div>
+);
+
+const pages = [<Vision />, <Mission />];
+
 const About = () => {
   const [open, setOpen] = useState(false);
+  const [page, setPage] = useState(0);
+
+  console.log(page);
+
+  const nextPage = () => {
+    setPage(page < pages.length - 1 ? page + 1 : page);
+  };
+  const prevPage = () => {
+    setPage(page > 0 ? page - 1 : page);
+  };
 
   const toggleOpen = () => {
     setOpen(!open);
@@ -35,7 +79,6 @@ const About = () => {
           <div className="my-4 h-2 bg-gray-25 lg:w-1/6 w-2/6" />
         </div>
       </div>
-
       <div className="">
         <div className="container max-w-2xl mx-auto py-8">
           <div className="mb-12">
@@ -80,6 +123,28 @@ const About = () => {
           <button className={`text-primary-100 font-bold`} onClick={toggleOpen}>
             {open ? "Read less" : "Read more..."}
           </button>
+          <hr className="my-4 text-gray-25" />
+
+          <div className="mt-12">
+            <button
+              className={`text-lg font-bold text-gray-100 px-4 py-2 rounded-tr ${
+                page !== pages.length - 1 && "bg-gray-25"
+              }`}
+              onClick={prevPage}
+            >
+              OUR VISION
+            </button>
+            <button
+              className={`text-lg font-bold text-gray-100 px-4 rounded-tl rounded-tr py-2 ${
+                page === pages.length - 1 && "bg-gray-25"
+              }`}
+              onClick={nextPage}
+            >
+              OUR MISSION
+            </button>
+
+            {pages[page]}
+          </div>
         </div>
       </div>
     </MainLayout>
