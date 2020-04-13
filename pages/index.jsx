@@ -1,7 +1,8 @@
 import React from "react";
+import MainLayout from "../components/layouts/layout";
 
 const Home = () => (
-  <>
+  <MainLayout>
     <div className="relative bg-gray-15">
       <div className="container mx-auto">
         <div className="lg:grid grid-cols-7 gap-4 py-40">
@@ -45,12 +46,12 @@ const Home = () => (
           </div>
           <div className="col-span-4 overflow-hidden my-auto">
             <h3 className="text-2xl font-bold">Your Best Value Proposition</h3>
-            <p className="lg:text-xl text-gray-100">
+            <p className="text-xl text-gray-100">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
 
-            <p className="mt-8 text-gray-75 text-base">
+            <p className="mt-8 text-gray-75">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -69,11 +70,11 @@ const Home = () => (
           <div className="my-4 h-2 bg-gray-100 lg:w-1/6 w-2/6"></div>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden">
+          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden border-2 hover:border-primary-75 border-transparent">
             <img
               src="https://images.unsplash.com/photo-1467664631004-58beab1ece0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
               alt=""
-              className="w-full"
+              className="w-full hidden lg:block"
             />
 
             <div className="p-5">
@@ -91,11 +92,11 @@ const Home = () => (
               </a>
             </div>
           </div>
-          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden">
+          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden  border-2 hover:border-primary-75 border-transparent">
             <img
               src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80"
               alt=""
-              className="w-full"
+              className="w-full hidden lg:block"
             />
             <div className="p-5">
               <h3 className="lg:text-xl font-bold text-primary-100 my-3">
@@ -111,11 +112,11 @@ const Home = () => (
               </a>
             </div>
           </div>
-          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden">
+          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden border-2 hover:border-primary-75 border-transparent">
             <img
               src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80"
               alt=""
-              className="w-full"
+              className="w-full hidden lg:block"
             />
             <div className="p-5">
               <h3 className="lg:text-xl font-bold text-primary-100 my-3">
@@ -131,11 +132,11 @@ const Home = () => (
               </a>
             </div>
           </div>
-          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden">
+          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden border-2 hover:border-primary-75 border-transparent">
             <img
               src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1291&q=80"
               alt=""
-              className="w-full"
+              className="w-full hidden lg:block"
             />
             <div className="p-5">
               <h3 className="lg:text-xl font-bold text-primary-100 my-3">
@@ -199,11 +200,11 @@ const Home = () => (
           <div className="my-4 h-2 bg-gray-100 lg:w-1/6 w-2/6"></div>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden">
+          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden border-2 hover:border-primary-75 border-transparent">
             <img
               src="https://images.unsplash.com/photo-1467664631004-58beab1ece0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
               alt=""
-              className="w-full"
+              className="w-full hidden lg:block"
             />
 
             <div className="p-5">
@@ -233,11 +234,11 @@ const Home = () => (
             </div>
           </div>
 
-          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden">
+          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden border-2 hover:border-primary-75 border-transparent">
             <img
               src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80"
               alt=""
-              className="w-full"
+              className="w-full hidden lg:block"
             />
             <div className="p-5">
               <h3 className="lg:text-xl font-bold text-primary-100 my-3">
@@ -262,11 +263,11 @@ const Home = () => (
               </a>
             </div>
           </div>
-          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden">
+          <div className="rounded-md bg-white hover:shadow-xl overflow-hidden border-2 hover:border-primary-75 border-transparent">
             <img
               src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1291&q=80"
               alt=""
-              className="w-full"
+              className="w-full hidden lg:block"
             />
             <div className="p-5">
               <h3 className="lg:text-xl font-bold text-primary-100 my-3">
@@ -328,19 +329,7 @@ const Home = () => (
         </div>
       </div>
     </div>
-
-    <div className="bg-gray-25">
-      <div className="container mx-auto py-20">
-        <div className="">
-          <h2 className="text-lg text-gray-100 text-center">
-            BIRC &copy; 2020.
-          </h2>
-
-          <div className="mt-4 h-1 bg-gray-100 lg:w-1/6 w-2/6 mx-auto"></div>
-        </div>
-      </div>
-    </div>
-  </>
+  </MainLayout>
 );
 
 export default Home;
