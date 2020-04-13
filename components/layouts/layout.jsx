@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/dist/client/router";
 import PropTypes from "prop-types";
 import Footer from "../footer";
+import { FiFeather, FiBookOpen, FiMonitor, FiMail } from "react-icons/fi";
 
 const Navbar = dynamic(() => import("../navbar"));
 
@@ -10,18 +11,22 @@ const routes = [
   {
     name: "About",
     path: "/about",
+    icon: <FiBookOpen className="mr-2 inline-block text-xl text-white" />,
   },
   {
     name: "Training",
     path: "/training",
+    icon: <FiFeather className="mr-2 inline-block text-xl text-white" />,
   },
   {
     name: "Works",
     path: "/works",
+    icon: <FiMonitor className="mr-2 inline-block text-xl text-white" />,
   },
   {
     name: "Contact",
     path: "/contact",
+    icon: <FiMail className="mr-2 inline-block text-xl text-white" />,
   },
 ];
 

@@ -16,3 +16,8 @@ body {
 a:hover > span {
   padding-left: 10px;
 }
+
+button,
+button:focus {
+  outline: none !important;
+}

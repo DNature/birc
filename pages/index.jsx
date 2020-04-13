@@ -10,10 +10,10 @@ const Home = () => (
             <h1 className="text-2xl lg:text-4xl font-bold">
               Bussiness Innovation & Re-Engineering Company
             </h1>
-            <p className="text-xl">
+            {/* <p className="text-xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            </p> */}
 
             <button className="btn px-6 py-3 bg-primary-100 rounded text-white font-bold my-6">
               Get started <span>&rarr;</span>
