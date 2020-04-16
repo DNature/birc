@@ -6,7 +6,7 @@
   @apply px-4;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
@@ -20,4 +20,59 @@ a:hover > span {
 button,
 button:focus {
   outline: none !important;
+}
+
+.brush::after {
+  z-index: -1;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  pointer-events: none;
+  bottom: -35px;
+  background-repeat: repeat-x;
+  background-position: 172px 0;
+  transition: linear 1s ease-in;
+  filter: brightness(100);
+  background-image: url(/images/brush-yellow.png);
+}
+
+.after::after {
+  z-index: 1;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  pointer-events: none;
+  bottom: -35px;
+  background-repeat: repeat-x;
+  filter: brightness(100);
+  background-position: 172px 0;
+  transition: linear 1s ease-in;
+  background-image: url(/images/brush-yellow.png);
+}
+
+.before::before {
+  z-index: 1;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  pointer-events: none;
+  top: -35px;
+  background-repeat: repeat-x;
+  filter: brightness(100);
+  background-position: 172px 0;
+  background-image: url(/images/brush-yellow.png);
+}
+
+.gray::before,
+.gray::after {
+  filter: grayscale(1) brightness(90%);
 }
