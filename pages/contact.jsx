@@ -70,7 +70,13 @@ const ContactPage = () => {
               Fill out the form and we’ll be in touch as soon as possible.
             </h2>
 
-            <form name='Contact form for birc.com' onSubmit={handleSubmit}>
+            <form
+              method='POST'
+              data-netlify='true'
+              netlify-honeypot='bot-field'
+              name='Contact form for birc.com'
+              onSubmit={handleSubmit}
+            >
               <div className='my-8'>
                 <input
                   type='text'
