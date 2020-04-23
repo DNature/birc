@@ -113,7 +113,7 @@ const ContactPage = () => {
               </button>
             </form>
           </div>
-          <div className='md:mt-0 md:ml-12 mt-16 lg:ml-20 self-end'>
+          <div className='md:mt-0 md:ml-12 mt-10 lg:ml-16 self-end'>
             <div className='gradient shadow-primary  shadow-2xl rounded-lg mt-auto h-full p-6'>
               <img src='/logo-white.svg' alt='Logo' className='mb-8 h-20' />
 
