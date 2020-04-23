@@ -46,10 +46,13 @@ const ContactPage = () => {
   return (
     <MainLayout pathname='/contact'>
       <div className='w-full bg-black relative -z-10  after after-2'>
-        <div className='w-full h-full overflow-hidden absolute top-0 left-0 -z-5'>
-          <div className='bg-gray-100 -rotate-180  circle absolute' />
-          <div className='bg-gray-75 circle-2 absolute' />
-        </div>
+        <div
+          className='w-full h-full overflow-hidden absolute top-0 left-0 -z-5 bg-no-repeat bg-cover bg-center opacity-50'
+          style={{
+            backgroundImage:
+              'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)',
+          }}
+        ></div>
         <div className='container py-32 sm:py-40 md:py-40 z-20'>
           <h1 className='text-center text-xl sm:text-3xl lg:text-4xl font-bold text-white'>
             We’d Love to hear from you
@@ -60,9 +63,9 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className='container -mt-64  mb-20'>
-        <div className='block lg:grid grid-cols-6 gap-6 grid-rows-2 xl:px-40 lg:px-32'>
-          <div className='bg-white shadow-2xl rounded-lg col-span-3 row-span-6 p-5 row-span-1 row-end-3'>
+      <div className='container -mt-64 mb-20'>
+        <div className='block max-w-4xl md:flex mx-auto justify-between'>
+          <div className='bg-white shadow-2xl rounded-lg p-5'>
             <h2 className='text-xl xl:text-2xl  g100 font-bold'>
               Fill out the form and we’ll be in touch as soon as possible.
             </h2>
@@ -110,8 +113,8 @@ const ContactPage = () => {
               </button>
             </form>
           </div>
-          <div className='col-span-3 lg:mt-0'>
-            <div className='gradient shadow-primary shadow rounded-lg mt-auto h-full p-6'>
+          <div className='md:mt-0 md:ml-12 mt-16 lg:ml-20 self-end'>
+            <div className='gradient shadow-primary  shadow-2xl rounded-lg mt-auto h-full p-6'>
               <img src='/logo-white.svg' alt='Logo' className='mb-8 h-20' />
 
               <div className='text-white flex'>
