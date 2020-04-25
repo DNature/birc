@@ -30,7 +30,7 @@ const ContactPage = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': 'Contact from divinehycenth.com',
+        'form-name': 'Contact from birc.com',
         ...values,
       }),
     })
@@ -74,7 +74,7 @@ const ContactPage = () => {
               method='POST'
               data-netlify='true'
               netlify-honeypot='bot-field'
-              name='Contact form for birc.com'
+              name='Contact from birc.com'
               onSubmit={handleSubmit}
             >
               <div className='my-8'>
