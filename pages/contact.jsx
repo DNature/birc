@@ -71,8 +71,8 @@ const ContactPage = () => {
             </h2>
 
             <form
-              // method='POST'
-              // data-netlify='true'
+              method='POST'
+              data-netlify='true'
               netlify-honeypot='bot-field'
               name='Contact form for birc.com'
               onSubmit={handleSubmit}

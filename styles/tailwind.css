@@ -88,3 +88,7 @@ button:focus {
 .-z-5 {
   z-index: -5;
 }
+
+.progress {
+  transition: 1s ease-in-out;
+}
