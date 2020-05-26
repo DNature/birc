@@ -32,8 +32,8 @@ const Navbar = ({ pathname, routes }) => {
   return (
     <>
       <div
-        className={`py-4 justify-center z-20 fixed top-0 left-0 w-full hidden sm:flex ${
-          navBackground && 'bg-white shadow-lg brush'
+        className={`py-4 justify-center z-20 fixed top-0 left-0 w-full hidden sm:flex nav ${
+          navBackground && 'brush bg-white shadow-lg '
         }`}
       >
         <nav className='flex content-center '>
@@ -49,7 +49,9 @@ const Navbar = ({ pathname, routes }) => {
           {routes.map(({ path, name }) => (
             <CustomLink
               key={name}
-              className='py-2 mr-6 text-gray-75 font-semibold block'
+              className={`py-2 mr-6 font-semibold block ${
+                navBackground && 'text-gray-75'
+              }`}
               href={path}
             >
               <>

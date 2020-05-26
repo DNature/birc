@@ -1,36 +1,35 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
+
 import MainLayout from '../components/layouts/layout';
 
 const Home = () => (
   <MainLayout>
-    <div className='relative bg-gray-15 before'>
-      <div className='container mx-auto'>
-        <div className='lg:grid grid-cols-7 gap-4 py-40'>
-          <div className='col-span-3 lg:pr-6'>
-            <h1 className='text-2xl lg:text-4xl font-bold'>
+    <div
+      className='relative overflow-hidden'
+      style={{ height: `100vh`, zIndex: '-10' }}
+    >
+      <div className='col-span-1 slider h-full overflow-hidden'>
+        <div className='s1 fixed top-0 left-0 h-full w-full slide'></div>
+        <div className='s2 fixed top-0 left-0 h-full w-full slide'></div>
+        <div className='s3 fixed top-0 left-0 h-full w-full slide'></div>
+        <div className='s4 fixed top-0 left-0 h-full w-full slide'></div>
+        <div className='s5 fixed top-0 left-0 h-full w-full slide'></div>
+        <div className='s6 fixed top-0 left-0 h-full w-full slide'></div>
+        <div
+          className='flex h-full items-center max-w-4xl'
+          style={{ zIndex: 1 }}
+        >
+          <div className='hero-title py-6 md:px-20 px-10 '>
+            <h1 className='text-2xl lg:text-3xl font-bold'>
               Bussiness Innovation & Re-Engineering Company
             </h1>
-            {/* <p className="text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p> */}
-
-            <button className='btn px-6 py-3 bg-primary-100 rounded text-white font-bold my-6'>
-              Get started <span>&rarr;</span>
-            </button>
-          </div>
-          <div className='col-span-4 overflow-hidden hidden lg:block'>
-            <img
-              src='/images/woman.jpg'
-              alt='Birc limited'
-              className='w-full h-full rounded'
-            />
           </div>
         </div>
       </div>
     </div>
 
-    <div className='relative'>
+    <div className='relative bg-white'>
       <div className='container after before mx-auto'>
         <div className='lg:grid grid-cols-7 gap-4 py-40'>
           <div
@@ -297,7 +296,7 @@ const Home = () => (
       </div>
     </div>
 
-    <div className='relative'>
+    <div className='relative bg-white'>
       <div className='container mx-auto py-40 before after'>
         <div className='mb-20'>
           <h2 className='text-2xl font-bold text-gray-100 text-center'>
