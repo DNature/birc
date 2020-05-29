@@ -10,11 +10,13 @@
     "deploy": "NODE_ENV=production yarn build && yarn export"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "9.3.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-glidejs": "^1.0.5",
-    "react-icons": "^3.9.0"
+    "react-icons": "^3.9.0",
+    "use-constant": "^1.0.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",

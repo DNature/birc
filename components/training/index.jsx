@@ -1,72 +1,160 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
+
+import { Panel, Tabs, useTabState } from './react-tabs';
+
 import MainLayout from '../layouts/layout';
 import data from './data';
 
-const TrainingSection = () => {
-  const [index, setIndex] = useState(1);
-  const tabItems = [
-    {
-      id: 0,
-      title: 'STRATEGIC MANAGEMENT',
-    },
-    {
-      id: 1,
-      title: 'CHANGE MANAGEMENT: EXAMINING THE OPTIONS FOR A BETTER SERVICE',
-    },
-  ];
+const Tab = ({ children }) => {
+  const { active, onClick } = useTabState();
 
-  console.log(data[tabItems[index].title]);
+  return (
+    <div
+      className={classNames('relative', {
+        ['wrapper transition-all duration-150 ']: active,
+      })}
+    >
+      <button
+        onClick={onClick}
+        className={classNames(
+          'cursor-pointer p-8 flex items-center relative text-left w-full',
+          {
+            ['bg-white transition-all duration-150 item-active']: active,
+            ['z-10 hover:bg-primary-75 rounded-lg']: !active,
+          }
+        )}
+      >
+        <h3
+          className={classNames('font-semibold text-white text-base', {
+            ['text-primary-100']: active,
+          })}
+        >
+          {children}
+        </h3>
+      </button>
+    </div>
+  );
+};
+
+const TrainingSection = () => {
+  const state = useState(0);
 
   return (
     <MainLayout pathname='/training' className='relative'>
-      <div className='bg-gray-15 py-32'>
-        <div className='container'>
-          <div
-            style={{ height: '80vh' }}
-            className='rounded-md lg:grid grid-cols-8 w-full overflow-hidden bg-primary-100'
-          >
-            <div className='h-full col-span-5 bg-white px-10 py-16'>
-              <h2 className='font-bold text-xl text-primary-100 mb-6'>
-                STRATEGIC MANAGEMENT
-              </h2>
+      <Tabs state={state}>
+        <div className='bg-gray-15 py-32'>
+          <div className='container'>
+            <div
+              style={{ height: '80vh' }}
+              className='rounded-md lg:grid grid-cols-8 w-full overflow-hidden bg-primary-100'
+            >
+              <div className='h-full col-span-5 bg-white px-10 py-16 overflow-y-scroll'>
+                {data &&
+                  data.map((ele) => {
+                    const {
+                      objectives,
+                      main,
+                      keyIssues,
+                      synopsis,
+                      participants,
+                      content,
+                    } = ele.body;
+                    return (
+                      <Panel key={ele.title}>
+                        <h2 className='font-bold text-xl text-primary-100 mb-6'>
+                          {ele.title}
+                        </h2>
 
-              <p className='text-md text-gray-75'>
-                The degree of success recorded by public or privates
-                organizations in archiving their set target depends on the
-                strategic management skills exhibited by Senior Management
-                Staff. With the ever changing roles of organizations, it is
-                imperative that their executives are able to strategically
-                orient their endeavours in the right direction. This workshop is
-                therefore designed to teach participants to think globally,
-                compete locally and internationally as well as implement a
-                customer/clients focused strategy for their respective
-                organizations.
-              </p>
-            </div>
-            <div className='col-span-3 py-16'>
-              <div className='wrapper relative'>
-                <div className='p-8 flex items-center bg-white item-active relative'>
-                  <h3 className='font-semibold text-primary-100 text-base'>
-                    STRATEGIC MANAGEMENT
-                  </h3>
-                </div>
+                        <p className='text-md text-gray-75'>{main}</p>
+                        <br />
+                        <br />
+                        {objectives && (
+                          <>
+                            <h3 className='text-xl font-semibold text-black'>
+                              OBJECTIVES
+                            </h3>
+                            <ul>
+                              {objectives.map((item) => (
+                                <li key={item} className='text-md text-gray-75'>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        <br />
+                        {content && (
+                          <>
+                            <h3 className='text-xl font-semibold text-black'>
+                              COURSE CONTENTS
+                            </h3>
+                            <ul>
+                              {content.map((item) => (
+                                <li key={item} className='text-md text-gray-75'>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        <br />
+                        {synopsis && (
+                          <>
+                            <h3 className='text-xl font-semibold text-black'>
+                              SYNOPSIS
+                            </h3>
+                            <ul>
+                              {synopsis.map((item) => (
+                                <li key={item} className='text-md text-gray-75'>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        <br />
+                        {keyIssues && (
+                          <>
+                            <h3 className='text-xl font-semibold text-black'>
+                              KEY ISSUES
+                            </h3>
+                            <ul>
+                              {keyIssues.map((item) => (
+                                <li key={item} className='text-md text-gray-75'>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        <br />
+                        {participants && (
+                          <>
+                            <h3 className='text-xl font-semibold text-black'>
+                              PARTICIPANTS
+                            </h3>
+                            <ul>
+                              {participants.map((item) => (
+                                <li key={item} className='text-md text-gray-75'>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        <br />
+                      </Panel>
+                    );
+                  })}
               </div>
-              <div className='p-8 flex z-10 items-center relative rounded-lg mr-4 hover:bg-primary-75'>
-                <h3 className='font-semibold text-white text-base'>
-                  CHANGE MANAGEMENT: EXAMINING THE OPTIONS FOR A BETTER SERVICE
-                </h3>
-              </div>
-              <div className='p-8 flex z-10 items-center relative rounded-lg mr-4 hover:bg-primary-75'>
-                <h3 className='font-semibold text-white text-base'>
-                  TEAM BUILDING AND TEAM WORKING:
-                </h3>
+              <div className='col-span-3 py-16'>
+                {data && data.map((ele) => <Tab key={ele.id}>{ele.title}</Tab>)}
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/*  */}
+      </Tabs>
     </MainLayout>
   );
 };

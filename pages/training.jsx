@@ -2,44 +2,7 @@ import React, { useState } from 'react';
 import MainLayout from '../components/layouts/layout';
 import TrainingSection from '../components/training';
 
-const Vision = () => (
-  <div className='bg-gray-25 p-4 rounded rounded-tl-none'>
-    <p className='text-lg'>
-      Our vision is to maximise opportunities, expand horizons and place our
-      clients in market leadership within their various businesses.
-    </p>
-  </div>
-);
-
-const Mission = () => (
-  <div className='bg-gray-25 p-4 rounded'>
-    <p className='text-lg'>
-      We seek to always provide our clients with customised services by
-      transforming and improving businesses and individuals, by the quality
-      service we deliver, which is translated to revenue generated.
-    </p>
-  </div>
-);
-
-const pages = [<Vision />, <Mission />];
-
 const Training = () => {
-  const [open, setOpen] = useState(false);
-  const [page, setPage] = useState(0);
-
-  console.log(page);
-
-  const nextPage = () => {
-    setPage(page < pages.length - 1 ? page + 1 : page);
-  };
-  const prevPage = () => {
-    setPage(page > 0 ? page - 1 : page);
-  };
-
-  const toggleOpen = () => {
-    setOpen(!open);
-  };
-
   return (
     <MainLayout pathname='/training' className='relative'>
       <div className='w-full relative mt-24'>
