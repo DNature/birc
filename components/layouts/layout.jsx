@@ -3,11 +3,22 @@ import dynamic from 'next/dynamic';
 import { useRouter } from 'next/dist/client/router';
 import PropTypes from 'prop-types';
 import Footer from '../footer';
-import { FiFeather, FiBookOpen, FiMonitor, FiMail } from 'react-icons/fi';
+import {
+  FiFeather,
+  FiBookOpen,
+  FiMonitor,
+  FiMail,
+  FiHome,
+} from 'react-icons/fi';
 
 const Navbar = dynamic(() => import('../navbar'));
 
 const routes = [
+  {
+    name: 'Home',
+    path: '/',
+    icon: <FiHome className='mr-2 inline-block text-xl text-white' />,
+  },
   {
     name: 'About',
     path: '/about',
