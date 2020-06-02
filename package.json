@@ -19,8 +19,8 @@
     "use-constant": "^1.0.0"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
-    "autoprefixer": "^9.7.6",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.8.0",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
     "postcss-preset-env": "^6.7.0",
