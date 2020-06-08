@@ -1,7 +1,12 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
+import { motion } from 'framer-motion';
 
 import MainLayout from '../components/layouts/layout';
+
+const variants = {
+  hidden: { translateX: '-100vh' },
+  visible: { translateX: 0 },
+};
 
 const Home = () => (
   <MainLayout>
@@ -20,11 +25,16 @@ const Home = () => (
           className='flex h-full items-center max-w-4xl'
           style={{ zIndex: 1 }}
         >
-          <div className='hero-title py-6 md:px-20 px-10 '>
+          <motion.div
+            initial='hidden'
+            animate='visible'
+            variants={variants}
+            className='hero-title py-6 md:px-20 px-10 '
+          >
             <h1 className='text-2xl lg:text-3xl font-bold'>
               Bussiness Innovation & Re-Engineering Company
             </h1>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
